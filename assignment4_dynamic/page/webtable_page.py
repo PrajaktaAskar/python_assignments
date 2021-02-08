@@ -1,9 +1,9 @@
-from selenium import webdriver
 from selenium.webdriver.common.by import By
 from assignment4_dynamic.utilities import custome_logger as cl
 import logging
 
-class WebTable():
+
+class WebTable:
 
     def __init__(self, driver):
         self.driver = driver
@@ -24,7 +24,7 @@ class WebTable():
         no_of_columns = len(self.driver.find_elements(By.XPATH, "//*[@id='customers']/tbody/tr/th"))
         all_data = []
         # iterate over the rows, to ignore the headers we have started the i with '1'
-        for i in range(2, no_of_rows+1):
+        for i in range(2, no_of_rows + 1):
             # reset the row data every time
             ro = []
             # iterate over columns
